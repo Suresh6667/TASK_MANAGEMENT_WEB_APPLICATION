@@ -8,7 +8,7 @@ const ViewTaskModal = ({ showViewModal, handleViewModalClose, id }) => {
   useEffect(() => {
     const getSingleTask = async () => {
       await axios
-        .get(`https://task-management-web-application.vercel.app/login/api/v1/task/single/${id}`, {
+        .get(`http://localhost:4000/api/v1/task/single/${id}`, {
           withCredentials: true,
         })
         .then((res) => {

@@ -25,7 +25,7 @@ function Header({
   const fetchTasks = async () => {
     try {
       const response = await axios.get(
-        "https://task-management-web-application.vercel.app/login/api/v1/task/mytask",
+        "http://localhost:4000/api/v1/task/mytask",
         { withCredentials: true }
       );
       setAllTasks(response.data.tasks);
@@ -38,7 +38,7 @@ function Header({
   const handleLogout = async () => {
     try {
       const { data } = await axios.get(
-        "https://task-management-web-application.vercel.app/login/api/v1/user/logout",
+        "http://localhost:4000/login/api/v1/user/logout",
         { withCredentials: "true" }
       );
       toast.success(data.message);

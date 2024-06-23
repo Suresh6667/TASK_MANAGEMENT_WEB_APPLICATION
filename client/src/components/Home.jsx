@@ -18,7 +18,7 @@ const Home = ({ isAuthenticated, tasks, setTasks, taskTitle }) => {
 
   const deleteTask = async (id) => {
     await axios
-      .delete(`https://task-management-web-application.vercel.app/login/api/v1/task/delete/${id}`, {
+      .delete(`http://localhost:4000/api/v1/task/delete/${id}`, {
         withCredentials: true,
       })
       .then((res) => {
